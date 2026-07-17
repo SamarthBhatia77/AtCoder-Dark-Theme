@@ -1,0 +1,732 @@
+/* theme.css */
+
+/* Core design tokens applied in dark mode */
+html[data-atcoder-theme="dark"] {
+  --ac-bg-main: #121214;
+  --ac-bg-secondary: #18181f;
+  --ac-bg-panel: #1e1e24;
+  --ac-bg-header: #272730;
+  
+  --ac-text-main: #eaeaea;
+  --ac-text-muted: #a1a1aa;
+  
+  --ac-border: #334155;
+  --ac-border-focus: #3b82f6;
+  
+  --ac-link: #60a5fa;
+  --ac-link-hover: #93c5fd;
+  
+  --ac-btn-bg: #1e293b;
+  --ac-btn-border: #475569;
+  --ac-btn-text: #f1f5f9;
+  
+  --ac-pre-bg: #0f172a;
+  --ac-pre-text: #e2e8f0;
+  --ac-pre-border: #334155;
+  
+  --ac-input-bg: #1e293b;
+  --ac-input-text: #f8fafc;
+  --ac-input-border: #475569;
+
+  /* Standings colors */
+  --ac-standings-ac: #14532d;
+  --ac-standings-wa: #7f1d1d;
+  --ac-standings-wj: #78350f;
+  
+  /* Readability ratings overrides */
+  --user-gray: #a1a1aa;
+  --user-brown: #d97706;
+  --user-green: #22c55e;
+  --user-cyan: #06b6d4;
+  --user-blue: #3b82f6;
+  --user-yellow: #eab308;
+  --user-orange: #f97316;
+  --user-red: #ef4444;
+  --user-admin: #c084fc;
+}
+
+/* Custom Scrollbars */
+html[data-atcoder-theme="dark"] ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+html[data-atcoder-theme="dark"] ::-webkit-scrollbar-track {
+  background: var(--ac-bg-main) !important;
+}
+
+html[data-atcoder-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #334155 !important;
+  border-radius: 5px !important;
+  border: 2px solid var(--ac-bg-main) !important;
+}
+
+html[data-atcoder-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #475569 !important;
+}
+
+/* Base Document Layout */
+html[data-atcoder-theme="dark"] {
+  background-color: var(--ac-bg-main) !important;
+  background: var(--ac-bg-main) !important;
+}
+
+html[data-atcoder-theme="dark"] body,
+html[data-atcoder-theme="dark"] #main-div {
+  background-color: var(--ac-bg-main) !important;
+  background: var(--ac-bg-main) !important;
+  color: var(--ac-text-main) !important;
+}
+
+html[data-atcoder-theme="dark"] #main-container {
+  background-color: var(--ac-bg-main) !important;
+  color: var(--ac-text-main) !important;
+}
+
+html[data-atcoder-theme="dark"] h1,
+html[data-atcoder-theme="dark"] h2,
+html[data-atcoder-theme="dark"] h3,
+html[data-atcoder-theme="dark"] h4,
+html[data-atcoder-theme="dark"] h5,
+html[data-atcoder-theme="dark"] h6 {
+  color: var(--ac-text-main) !important;
+}
+
+html[data-atcoder-theme="dark"] hr {
+  border-top-color: var(--ac-border) !important;
+}
+
+html[data-atcoder-theme="dark"] a {
+  color: var(--ac-link) !important;
+}
+
+html[data-atcoder-theme="dark"] a:hover,
+html[data-atcoder-theme="dark"] a:focus {
+  color: var(--ac-link-hover) !important;
+  text-decoration: underline !important;
+}
+
+html[data-atcoder-theme="dark"] .text-muted {
+  color: var(--ac-text-muted) !important;
+}
+
+/* Bootstrap Navbars */
+html[data-atcoder-theme="dark"] .navbar,
+html[data-atcoder-theme="dark"] .navbar-default,
+html[data-atcoder-theme="dark"] .navbar-inverse {
+  background-color: var(--ac-bg-secondary) !important;
+  background-image: none !important;
+  background: var(--ac-bg-secondary) !important;
+  border-color: var(--ac-border) !important;
+}
+
+html[data-atcoder-theme="dark"] .navbar-default .navbar-brand,
+html[data-atcoder-theme="dark"] .navbar-inverse .navbar-brand {
+  color: var(--ac-text-main) !important;
+}
+
+html[data-atcoder-theme="dark"] .navbar-default .navbar-nav > li > a,
+html[data-atcoder-theme="dark"] .navbar-inverse .navbar-nav > li > a {
+  color: var(--ac-text-muted) !important;
+}
+
+html[data-atcoder-theme="dark"] .navbar-default .navbar-nav > li > a:hover,
+html[data-atcoder-theme="dark"] .navbar-default .navbar-nav > li > a:focus,
+html[data-atcoder-theme="dark"] .navbar-inverse .navbar-nav > li > a:hover,
+html[data-atcoder-theme="dark"] .navbar-inverse .navbar-nav > li > a:focus {
+  color: var(--ac-text-main) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-atcoder-theme="dark"] .navbar-default .navbar-nav > .active > a,
+html[data-atcoder-theme="dark"] .navbar-default .navbar-nav > .active > a:hover,
+html[data-atcoder-theme="dark"] .navbar-default .navbar-nav > .active > a:focus,
+html[data-atcoder-theme="dark"] .navbar-inverse .navbar-nav > .active > a,
+html[data-atcoder-theme="dark"] .navbar-inverse .navbar-nav > .active > a:hover,
+html[data-atcoder-theme="dark"] .navbar-inverse .navbar-nav > .active > a:focus {
+  color: var(--ac-text-main) !important;
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+html[data-atcoder-theme="dark"] .navbar-default .navbar-nav > .open > a,
+html[data-atcoder-theme="dark"] .navbar-default .navbar-nav > .open > a:hover,
+html[data-atcoder-theme="dark"] .navbar-default .navbar-nav > .open > a:focus,
+html[data-atcoder-theme="dark"] .navbar-inverse .navbar-nav > .open > a,
+html[data-atcoder-theme="dark"] .navbar-inverse .navbar-nav > .open > a:hover,
+html[data-atcoder-theme="dark"] .navbar-inverse .navbar-nav > .open > a:focus {
+  color: var(--ac-text-main) !important;
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Contest page subnavigation wrapper */
+html[data-atcoder-theme="dark"] #contest-nav-tabs {
+  background-color: var(--ac-bg-secondary) !important;
+  background: var(--ac-bg-secondary) !important;
+  border: 1px solid var(--ac-border) !important;
+  border-radius: 4px !important;
+  padding: 8px 15px !important;
+}
+
+html[data-atcoder-theme="dark"] #contest-nav-tabs .navbar,
+html[data-atcoder-theme="dark"] #contest-nav-tabs .navbar-default {
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+  margin-bottom: 0 !important;
+}
+
+/* Links in contest page navbar/tabs */
+html[data-atcoder-theme="dark"] #contest-nav-tabs .navbar-nav > li > a,
+html[data-atcoder-theme="dark"] #contest-nav-tabs .nav-tabs > li > a {
+  color: var(--ac-link) !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+html[data-atcoder-theme="dark"] #contest-nav-tabs .navbar-nav > li > a:hover,
+html[data-atcoder-theme="dark"] #contest-nav-tabs .navbar-nav > li > a:focus,
+html[data-atcoder-theme="dark"] #contest-nav-tabs .nav-tabs > li > a:hover,
+html[data-atcoder-theme="dark"] #contest-nav-tabs .nav-tabs > li > a:focus {
+  color: var(--ac-link-hover) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-radius: 4px !important;
+}
+
+html[data-atcoder-theme="dark"] #contest-nav-tabs .navbar-nav > .active > a,
+html[data-atcoder-theme="dark"] #contest-nav-tabs .navbar-nav > .active > a:hover,
+html[data-atcoder-theme="dark"] #contest-nav-tabs .navbar-nav > .active > a:focus,
+html[data-atcoder-theme="dark"] #contest-nav-tabs .nav-tabs > li.active > a,
+html[data-atcoder-theme="dark"] #contest-nav-tabs .nav-tabs > li.active > a:hover,
+html[data-atcoder-theme="dark"] #contest-nav-tabs .nav-tabs > li.active > a:focus {
+  color: var(--ac-text-main) !important;
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: none !important;
+  border-radius: 4px !important;
+}
+
+/* Navigation tabs (Contests subnavigation) */
+html[data-atcoder-theme="dark"] .nav-tabs {
+  background-color: transparent !important;
+  background: transparent !important;
+  border-bottom: 1px solid var(--ac-border) !important;
+}
+
+html[data-atcoder-theme="dark"] .nav-tabs > li > a {
+  background-color: transparent !important;
+  background: transparent !important;
+  color: var(--ac-text-muted) !important;
+  border: 1px solid transparent !important;
+}
+
+html[data-atcoder-theme="dark"] .nav-tabs > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  color: var(--ac-text-main) !important;
+  border-color: var(--ac-border) var(--ac-border) transparent !important;
+}
+
+html[data-atcoder-theme="dark"] .nav-tabs > li.active > a,
+html[data-atcoder-theme="dark"] .nav-tabs > li.active > a:hover,
+html[data-atcoder-theme="dark"] .nav-tabs > li.active > a:focus {
+  color: var(--ac-text-main) !important;
+  background-color: var(--ac-bg-main) !important;
+  border: 1px solid var(--ac-border) !important;
+  border-bottom-color: var(--ac-bg-main) !important;
+}
+
+html[data-atcoder-theme="dark"] .nav-pills > li > a {
+  color: var(--ac-text-muted) !important;
+}
+
+html[data-atcoder-theme="dark"] .nav-pills > li.active > a,
+html[data-atcoder-theme="dark"] .nav-pills > li.active > a:hover,
+html[data-atcoder-theme="dark"] .nav-pills > li.active > a:focus {
+  background-color: var(--ac-border-focus) !important;
+  color: #ffffff !important;
+}
+
+/* Dropdown Menus */
+html[data-atcoder-theme="dark"] .dropdown-menu {
+  background-color: var(--ac-bg-panel) !important;
+  border: 1px solid var(--ac-border) !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+html[data-atcoder-theme="dark"] .dropdown-menu > li > a {
+  color: var(--ac-text-main) !important;
+}
+
+html[data-atcoder-theme="dark"] .dropdown-menu > li > a:hover,
+html[data-atcoder-theme="dark"] .dropdown-menu > li > a:focus {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: var(--ac-text-main) !important;
+}
+
+html[data-atcoder-theme="dark"] .dropdown-menu .divider {
+  background-color: var(--ac-border) !important;
+}
+
+/* Panels and Wells */
+html[data-atcoder-theme="dark"] .panel,
+html[data-atcoder-theme="dark"] .panel-default,
+html[data-atcoder-theme="dark"] .panel-primary,
+html[data-atcoder-theme="dark"] .panel-info,
+html[data-atcoder-theme="dark"] .panel-success,
+html[data-atcoder-theme="dark"] .panel-warning,
+html[data-atcoder-theme="dark"] .panel-danger {
+  background-color: var(--ac-bg-panel) !important;
+  border-color: var(--ac-border) !important;
+}
+
+html[data-atcoder-theme="dark"] .panel-heading {
+  background-color: var(--ac-bg-header) !important;
+  border-color: var(--ac-border) !important;
+  color: var(--ac-text-main) !important;
+}
+
+html[data-atcoder-theme="dark"] .panel-title {
+  color: var(--ac-text-main) !important;
+}
+
+html[data-atcoder-theme="dark"] .panel-body {
+  background-color: var(--ac-bg-panel) !important;
+  color: var(--ac-text-main) !important;
+}
+
+html[data-atcoder-theme="dark"] .panel-footer {
+  background-color: var(--ac-bg-secondary) !important;
+  border-top: 1px solid var(--ac-border) !important;
+  color: var(--ac-text-muted) !important;
+}
+
+html[data-atcoder-theme="dark"] .well {
+  background-color: var(--ac-bg-secondary) !important;
+  border-color: var(--ac-border) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15) !important;
+}
+
+html[data-atcoder-theme="dark"] .jumbotron {
+  background-color: var(--ac-bg-panel) !important;
+  color: var(--ac-text-main) !important;
+}
+
+/* Bootstrap Form Controls */
+html[data-atcoder-theme="dark"] .form-control,
+html[data-atcoder-theme="dark"] input[type="text"],
+html[data-atcoder-theme="dark"] input[type="password"],
+html[data-atcoder-theme="dark"] select,
+html[data-atcoder-theme="dark"] textarea {
+  background-color: var(--ac-input-bg) !important;
+  color: var(--ac-input-text) !important;
+  border: 1px solid var(--ac-input-border) !important;
+}
+
+html[data-atcoder-theme="dark"] .form-control:focus,
+html[data-atcoder-theme="dark"] input[type="text"]:focus,
+html[data-atcoder-theme="dark"] input[type="password"]:focus,
+html[data-atcoder-theme="dark"] select:focus,
+html[data-atcoder-theme="dark"] textarea:focus {
+  border-color: var(--ac-border-focus) !important;
+  outline: 0 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important;
+}
+
+/* Tables */
+html[data-atcoder-theme="dark"] .table {
+  color: var(--ac-text-main) !important;
+  background-color: var(--ac-bg-panel) !important;
+}
+
+html[data-atcoder-theme="dark"] th,
+html[data-atcoder-theme="dark"] .table > thead > tr > th,
+html[data-atcoder-theme="dark"] .table > tbody > tr > th,
+html[data-atcoder-theme="dark"] .table > tfoot > tr > th {
+  background-color: var(--ac-bg-header) !important;
+  color: var(--ac-text-main) !important;
+  border-color: var(--ac-border) !important;
+}
+
+html[data-atcoder-theme="dark"] .table > tbody > tr > td,
+html[data-atcoder-theme="dark"] .table > tbody > tr > th,
+html[data-atcoder-theme="dark"] .table > thead > tr > td,
+html[data-atcoder-theme="dark"] .table > tfoot > tr > td {
+  border-top: 1px solid var(--ac-border) !important;
+  border-bottom: none !important;
+}
+
+html[data-atcoder-theme="dark"] .table-bordered {
+  border: 1px solid var(--ac-border) !important;
+}
+
+html[data-atcoder-theme="dark"] .table-bordered > thead > tr > th,
+html[data-atcoder-theme="dark"] .table-bordered > tbody > tr > th,
+html[data-atcoder-theme="dark"] .table-bordered > tfoot > tr > th,
+html[data-atcoder-theme="dark"] .table-bordered > thead > tr > td,
+html[data-atcoder-theme="dark"] .table-bordered > tbody > tr > td,
+html[data-atcoder-theme="dark"] .table-bordered > tfoot > tr > td {
+  border: 1px solid var(--ac-border) !important;
+}
+
+html[data-atcoder-theme="dark"] .table > tbody > tr > td {
+  background-color: transparent !important;
+}
+
+html[data-atcoder-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) > td,
+html[data-atcoder-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) > th {
+  background-color: var(--ac-bg-secondary) !important;
+}
+
+html[data-atcoder-theme="dark"] .table-hover > tbody > tr:hover,
+html[data-atcoder-theme="dark"] .table-hover > tbody > tr:hover > td,
+html[data-atcoder-theme="dark"] .table-hover > tbody > tr:hover > th {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Standings color configurations */
+html[data-atcoder-theme="dark"] .standings-ac,
+html[data-atcoder-theme="dark"] .table > tbody > tr > td.success,
+html[data-atcoder-theme="dark"] .table > tbody > tr.success > td {
+  background-color: var(--ac-standings-ac) !important;
+  color: #ffffff !important;
+}
+
+html[data-atcoder-theme="dark"] .standings-wa,
+html[data-atcoder-theme="dark"] .table > tbody > tr > td.danger,
+html[data-atcoder-theme="dark"] .table > tbody > tr.danger > td {
+  background-color: var(--ac-standings-wa) !important;
+  color: #ffffff !important;
+}
+
+html[data-atcoder-theme="dark"] .table > tbody > tr > td.warning,
+html[data-atcoder-theme="dark"] .table > tbody > tr.warning > td {
+  background-color: var(--ac-standings-wj) !important;
+  color: #ffffff !important;
+}
+
+html[data-atcoder-theme="dark"] .table > tbody > tr > td.info,
+html[data-atcoder-theme="dark"] .table > tbody > tr.info > td {
+  background-color: #1e3a8a !important;
+  color: #ffffff !important;
+}
+
+/* Standings link color inside context table rows */
+html[data-atcoder-theme="dark"] .table > tbody > tr.success > td a,
+html[data-atcoder-theme="dark"] .table > tbody > tr.danger > td a,
+html[data-atcoder-theme="dark"] .table > tbody > tr.warning > td a,
+html[data-atcoder-theme="dark"] .table > tbody > tr.info > td a,
+html[data-atcoder-theme="dark"] td.success a,
+html[data-atcoder-theme="dark"] td.danger a,
+html[data-atcoder-theme="dark"] td.warning a,
+html[data-atcoder-theme="dark"] td.info a {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+/* Buttons */
+html[data-atcoder-theme="dark"] .btn-default {
+  background-color: var(--ac-btn-bg) !important;
+  border-color: var(--ac-btn-border) !important;
+  color: var(--ac-btn-text) !important;
+  transition: background-color 0.2s, border-color 0.2s !important;
+}
+
+html[data-atcoder-theme="dark"] .btn-default:hover,
+html[data-atcoder-theme="dark"] .btn-default:focus,
+html[data-atcoder-theme="dark"] .btn-default:active,
+html[data-atcoder-theme="dark"] .btn-default.active {
+  background-color: #334155 !important;
+  border-color: #64748b !important;
+  color: #ffffff !important;
+}
+
+html[data-atcoder-theme="dark"] .btn-primary {
+  background-color: #2563eb !important;
+  border-color: #1d4ed8 !important;
+}
+html[data-atcoder-theme="dark"] .btn-primary:hover {
+  background-color: #1d4ed8 !important;
+}
+
+html[data-atcoder-theme="dark"] .btn-success {
+  background-color: #16a34a !important;
+  border-color: #15803d !important;
+}
+html[data-atcoder-theme="dark"] .btn-success:hover {
+  background-color: #15803d !important;
+}
+
+html[data-atcoder-theme="dark"] .btn-danger {
+  background-color: #dc2626 !important;
+  border-color: #b91c1c !important;
+}
+html[data-atcoder-theme="dark"] .btn-danger:hover {
+  background-color: #b91c1c !important;
+}
+
+/* Code Preformatted blocks */
+html[data-atcoder-theme="dark"] pre {
+  background-color: var(--ac-pre-bg) !important;
+  color: var(--ac-pre-text) !important;
+  border-color: var(--ac-pre-border) !important;
+}
+
+html[data-atcoder-theme="dark"] code {
+  background-color: var(--ac-pre-bg) !important;
+  color: #f43f5e !important;
+}
+
+html[data-atcoder-theme="dark"] pre code {
+  color: inherit !important;
+  background-color: transparent !important;
+}
+
+/* Copy Buttons */
+html[data-atcoder-theme="dark"] .div-btn-copy {
+  background-color: var(--ac-btn-bg) !important;
+  border-color: var(--ac-btn-border) !important;
+}
+
+html[data-atcoder-theme="dark"] .btn-copy {
+  color: var(--ac-btn-text) !important;
+}
+
+html[data-atcoder-theme="dark"] .btn-copy:hover {
+  background-color: #334155 !important;
+}
+
+/* Status Badges */
+html[data-atcoder-theme="dark"] .label-success {
+  background-color: #16a34a !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+html[data-atcoder-theme="dark"] .label-warning {
+  background-color: #d97706 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+html[data-atcoder-theme="dark"] .label-danger {
+  background-color: #dc2626 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+html[data-atcoder-theme="dark"] .label-default {
+  background-color: #4b5563 !important;
+  color: #ffffff !important;
+}
+
+/* User Rating Overrides */
+html[data-atcoder-theme="dark"] .user-gray {
+  color: var(--user-gray) !important;
+}
+html[data-atcoder-theme="dark"] .user-brown {
+  color: var(--user-brown) !important;
+}
+html[data-atcoder-theme="dark"] .user-green {
+  color: var(--user-green) !important;
+}
+html[data-atcoder-theme="dark"] .user-cyan {
+  color: var(--user-cyan) !important;
+}
+html[data-atcoder-theme="dark"] .user-blue {
+  color: var(--user-blue) !important;
+}
+html[data-atcoder-theme="dark"] .user-yellow {
+  color: var(--user-yellow) !important;
+}
+html[data-atcoder-theme="dark"] .user-orange {
+  color: var(--user-orange) !important;
+}
+html[data-atcoder-theme="dark"] .user-red {
+  color: var(--user-red) !important;
+}
+html[data-atcoder-theme="dark"] .user-admin {
+  color: var(--user-admin) !important;
+}
+html[data-atcoder-theme="dark"] .user-unrated {
+  color: var(--user-gray) !important;
+}
+
+/* CodeMirror Editor Overrides */
+html[data-atcoder-theme="dark"] .CodeMirror {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border: 1px solid var(--ac-border) !important;
+}
+
+html[data-atcoder-theme="dark"] .CodeMirror-gutters {
+  background-color: #1e293b !important;
+  border-right: 1px solid var(--ac-border) !important;
+}
+
+html[data-atcoder-theme="dark"] .CodeMirror-linenumber {
+  color: var(--ac-text-muted) !important;
+}
+
+html[data-atcoder-theme="dark"] .CodeMirror-cursor {
+  border-left: 2px solid #ffffff !important;
+}
+
+html[data-atcoder-theme="dark"] .CodeMirror-selected {
+  background-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+html[data-atcoder-theme="dark"] .cm-keyword { color: #f43f5e !important; font-weight: bold !important; }
+html[data-atcoder-theme="dark"] .cm-atom { color: #c084fc !important; }
+html[data-atcoder-theme="dark"] .cm-number { color: #f59e0b !important; }
+html[data-atcoder-theme="dark"] .cm-def { color: #38bdf8 !important; }
+html[data-atcoder-theme="dark"] .cm-variable { color: #f8fafc !important; }
+html[data-atcoder-theme="dark"] .cm-variable-2 { color: #38bdf8 !important; }
+html[data-atcoder-theme="dark"] .cm-variable-3 { color: #c084fc !important; }
+html[data-atcoder-theme="dark"] .cm-property { color: #fb7185 !important; }
+html[data-atcoder-theme="dark"] .cm-operator { color: #38bdf8 !important; }
+html[data-atcoder-theme="dark"] .cm-comment { color: #64748b !important; font-style: italic !important; }
+html[data-atcoder-theme="dark"] .cm-string { color: #4ade80 !important; }
+html[data-atcoder-theme="dark"] .cm-string-2 { color: #22c55e !important; }
+html[data-atcoder-theme="dark"] .cm-meta { color: #94a3b8 !important; }
+html[data-atcoder-theme="dark"] .cm-error { color: #f87171 !important; border-bottom: 1px dashed #ef4444 !important; }
+html[data-atcoder-theme="dark"] .cm-qualifier { color: #f59e0b !important; }
+html[data-atcoder-theme="dark"] .cm-builtin { color: #38bdf8 !important; }
+html[data-atcoder-theme="dark"] .cm-bracket { color: #cbd5e1 !important; }
+html[data-atcoder-theme="dark"] .cm-tag { color: #f43f5e !important; }
+html[data-atcoder-theme="dark"] .cm-attribute { color: #c084fc !important; }
+html[data-atcoder-theme="dark"] .cm-header { color: #38bdf8 !important; }
+html[data-atcoder-theme="dark"] .cm-link { color: #60a5fa !important; }
+
+/* Ace Editor Overrides */
+html[data-atcoder-theme="dark"] .ace_editor {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border: 1px solid var(--ac-border) !important;
+}
+
+html[data-atcoder-theme="dark"] .ace_gutter {
+  background-color: #1e293b !important;
+  color: var(--ac-text-muted) !important;
+  border-right: 1px solid var(--ac-border) !important;
+}
+
+html[data-atcoder-theme="dark"] .ace_gutter-active-line {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+html[data-atcoder-theme="dark"] .ace_marker-layer .ace_active-line {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+html[data-atcoder-theme="dark"] .ace_marker-layer .ace_selection {
+  background-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+html[data-atcoder-theme="dark"] .ace_cursor {
+  color: #ffffff !important;
+}
+
+html[data-atcoder-theme="dark"] .ace_keyword { color: #f43f5e !important; font-weight: bold !important; }
+html[data-atcoder-theme="dark"] .ace_string { color: #4ade80 !important; }
+html[data-atcoder-theme="dark"] .ace_comment { color: #64748b !important; font-style: italic !important; }
+html[data-atcoder-theme="dark"] .ace_numeric { color: #f59e0b !important; }
+html[data-atcoder-theme="dark"] .ace_variable { color: #f8fafc !important; }
+html[data-atcoder-theme="dark"] .ace_function { color: #38bdf8 !important; }
+html[data-atcoder-theme="dark"] .ace_storage { color: #f43f5e !important; font-weight: bold !important; }
+html[data-atcoder-theme="dark"] .ace_operator { color: #38bdf8 !important; }
+
+/* Keep rating charts readable inside a clean white-backed card */
+html[data-atcoder-theme="dark"] #ratingCanvas,
+html[data-atcoder-theme="dark"] #ratingCanvasContainer,
+html[data-atcoder-theme="dark"] canvas#ratingStatus,
+html[data-atcoder-theme="dark"] #ratingCanvas + canvas {
+  background-color: #ffffff !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--ac-border) !important;
+  padding: 8px !important;
+}
+
+/* Inactive tabs hover styles */
+html[data-atcoder-theme="dark"] .nav-tabs > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-color: var(--ac-border) var(--ac-border) transparent !important;
+  color: var(--ac-text-main) !important;
+}
+
+/* Contest Registration / Participation Information Box */
+html[data-atcoder-theme="dark"] .insert-participant-box {
+  background-color: var(--ac-bg-panel) !important;
+  color: var(--ac-text-main) !important;
+  border: 1px solid var(--ac-border) !important;
+}
+
+/* Small and Muted Duration/Status texts */
+html[data-atcoder-theme="dark"] small,
+html[data-atcoder-theme="dark"] .small {
+  color: var(--ac-text-muted) !important;
+}
+
+/* Fixed Server Timer overrides */
+html[data-atcoder-theme="dark"] #fixed-server-timer,
+html[data-atcoder-theme="dark"] #fixed-server-time {
+  background-color: var(--ac-bg-panel) !important;
+  color: var(--ac-text-main) !important;
+  border: 1px solid var(--ac-border) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Page Footer styling */
+html[data-atcoder-theme="dark"] footer,
+html[data-atcoder-theme="dark"] .footer {
+  background-color: var(--ac-bg-secondary) !important;
+  background: var(--ac-bg-secondary) !important;
+  border-top: 1px solid var(--ac-border) !important;
+  color: var(--ac-text-muted) !important;
+}
+
+/* Pagination / Page Chooser styling */
+html[data-atcoder-theme="dark"] .pagination > li > a,
+html[data-atcoder-theme="dark"] .pagination > li > span {
+  background-color: var(--ac-btn-bg) !important;
+  background: var(--ac-btn-bg) !important;
+  border-color: var(--ac-border) !important;
+  color: var(--ac-link) !important;
+}
+
+html[data-atcoder-theme="dark"] .pagination > li > a:hover,
+html[data-atcoder-theme="dark"] .pagination > li > a:focus,
+html[data-atcoder-theme="dark"] .pagination > li > span:hover,
+html[data-atcoder-theme="dark"] .pagination > li > span:focus {
+  background-color: #334155 !important;
+  background: #334155 !important;
+  border-color: #64748b !important;
+  color: var(--ac-link-hover) !important;
+}
+
+html[data-atcoder-theme="dark"] .pagination > .active > a,
+html[data-atcoder-theme="dark"] .pagination > .active > a:hover,
+html[data-atcoder-theme="dark"] .pagination > .active > a:focus,
+html[data-atcoder-theme="dark"] .pagination > .active > span,
+html[data-atcoder-theme="dark"] .pagination > .active > span:hover,
+html[data-atcoder-theme="dark"] .pagination > .active > span:focus {
+  background-color: var(--ac-border-focus) !important;
+  background: var(--ac-border-focus) !important;
+  border-color: var(--ac-border-focus) !important;
+  color: #ffffff !important;
+}
+
+html[data-atcoder-theme="dark"] .pagination > .disabled > a,
+html[data-atcoder-theme="dark"] .pagination > .disabled > a:hover,
+html[data-atcoder-theme="dark"] .pagination > .disabled > a:focus,
+html[data-atcoder-theme="dark"] .pagination > .disabled > span,
+html[data-atcoder-theme="dark"] .pagination > .disabled > span:hover,
+html[data-atcoder-theme="dark"] .pagination > .disabled > span:focus {
+  background-color: var(--ac-bg-main) !important;
+  background: var(--ac-bg-main) !important;
+  border-color: var(--ac-border) !important;
+  color: var(--ac-text-muted) !important;
+  cursor: not-allowed !important;
+}
