@@ -335,6 +335,72 @@ html[data-atcoder-theme="dark"] textarea:focus {
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important;
 }
 
+/* Select2 overrides for dark mode search filters */
+html[data-atcoder-theme="dark"] .select2-container--default .select2-selection--single,
+html[data-atcoder-theme="dark"] .select2-container--default .select2-selection--multiple,
+html[data-atcoder-theme="dark"] .select2-choice,
+html[data-atcoder-theme="dark"] .select2-choices {
+  background-color: var(--ac-input-bg) !important;
+  background-image: none !important;
+  border: 1px solid var(--ac-input-border) !important;
+  color: var(--ac-input-text) !important;
+  height: 34px !important;
+}
+
+html[data-atcoder-theme="dark"] .select2-container--default .select2-selection--single .select2-selection__rendered,
+html[data-atcoder-theme="dark"] .select2-chosen {
+  color: var(--ac-input-text) !important;
+  line-height: 32px !important;
+}
+
+html[data-atcoder-theme="dark"] .select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: var(--ac-text-muted) !important;
+}
+
+html[data-atcoder-theme="dark"] .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 32px !important;
+}
+
+html[data-atcoder-theme="dark"] .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: var(--ac-text-muted) transparent transparent transparent !important;
+}
+
+html[data-atcoder-theme="dark"] .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-color: transparent transparent var(--ac-text-muted) transparent !important;
+}
+
+html[data-atcoder-theme="dark"] .select2-dropdown {
+  background-color: var(--ac-bg-panel) !important;
+  border: 1px solid var(--ac-border) !important;
+}
+
+html[data-atcoder-theme="dark"] .select2-search--dropdown {
+  background-color: var(--ac-bg-panel) !important;
+}
+
+html[data-atcoder-theme="dark"] .select2-search--dropdown .select2-search__field,
+html[data-atcoder-theme="dark"] .select2-search input {
+  background-color: var(--ac-input-bg) !important;
+  color: var(--ac-input-text) !important;
+  border: 1px solid var(--ac-input-border) !important;
+}
+
+html[data-atcoder-theme="dark"] .select2-results__option {
+  background-color: var(--ac-bg-panel) !important;
+  color: var(--ac-text-main) !important;
+}
+
+html[data-atcoder-theme="dark"] .select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: var(--ac-text-main) !important;
+}
+
+html[data-atcoder-theme="dark"] .select2-container--default .select2-results__option--highlighted[aria-selected],
+html[data-atcoder-theme="dark"] .select2-results .select2-highlighted {
+  background-color: var(--ac-border-focus) !important;
+  color: #ffffff !important;
+}
+
 /* Tables */
 html[data-atcoder-theme="dark"] .table {
   color: var(--ac-text-main) !important;
@@ -490,12 +556,25 @@ html[data-atcoder-theme="dark"] .div-btn-copy {
   border-color: var(--ac-btn-border) !important;
 }
 
-html[data-atcoder-theme="dark"] .btn-copy {
+html[data-atcoder-theme="dark"] .btn-copy,
+html[data-atcoder-theme="dark"] .copy-btn,
+html[data-atcoder-theme="dark"] .btn-pre-copy,
+html[data-atcoder-theme="dark"] .copy-button,
+html[data-atcoder-theme="dark"] .copy-to-clipboard,
+html[data-atcoder-theme="dark"] pre button {
+  background-color: var(--ac-btn-bg) !important;
+  border: 1px solid var(--ac-btn-border) !important;
   color: var(--ac-btn-text) !important;
 }
 
-html[data-atcoder-theme="dark"] .btn-copy:hover {
+html[data-atcoder-theme="dark"] .btn-copy:hover,
+html[data-atcoder-theme="dark"] .copy-btn:hover,
+html[data-atcoder-theme="dark"] .btn-pre-copy:hover,
+html[data-atcoder-theme="dark"] .copy-button:hover,
+html[data-atcoder-theme="dark"] .copy-to-clipboard:hover,
+html[data-atcoder-theme="dark"] pre button:hover {
   background-color: #334155 !important;
+  color: #ffffff !important;
 }
 
 /* Status Badges */
@@ -724,6 +803,38 @@ html[data-atcoder-theme="dark"] .pagination > .disabled > a:focus,
 html[data-atcoder-theme="dark"] .pagination > .disabled > span,
 html[data-atcoder-theme="dark"] .pagination > .disabled > span:hover,
 html[data-atcoder-theme="dark"] .pagination > .disabled > span:focus {
+  background-color: var(--ac-bg-main) !important;
+  background: var(--ac-bg-main) !important;
+  border-color: var(--ac-border) !important;
+  color: var(--ac-text-muted) !important;
+  cursor: not-allowed !important;
+}
+
+/* Pager styling */
+html[data-atcoder-theme="dark"] .pager > li > a,
+html[data-atcoder-theme="dark"] .pager > li > span {
+  background-color: var(--ac-btn-bg) !important;
+  background: var(--ac-btn-bg) !important;
+  border-color: var(--ac-border) !important;
+  color: var(--ac-link) !important;
+}
+
+html[data-atcoder-theme="dark"] .pager > li > a:hover,
+html[data-atcoder-theme="dark"] .pager > li > a:focus,
+html[data-atcoder-theme="dark"] .pager > li > span:hover,
+html[data-atcoder-theme="dark"] .pager > li > span:focus {
+  background-color: #334155 !important;
+  background: #334155 !important;
+  border-color: #64748b !important;
+  color: var(--ac-link-hover) !important;
+}
+
+html[data-atcoder-theme="dark"] .pager > .disabled > a,
+html[data-atcoder-theme="dark"] .pager > .disabled > a:hover,
+html[data-atcoder-theme="dark"] .pager > .disabled > a:focus,
+html[data-atcoder-theme="dark"] .pager > .disabled > span,
+html[data-atcoder-theme="dark"] .pager > .disabled > span:hover,
+html[data-atcoder-theme="dark"] .pager > .disabled > span:focus {
   background-color: var(--ac-bg-main) !important;
   background: var(--ac-bg-main) !important;
   border-color: var(--ac-border) !important;
